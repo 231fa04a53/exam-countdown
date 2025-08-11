@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exam Countdown & Study Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Exam Countdown & Study Planner</h1>
+    <form id="studyPlanForm">
+      <div class="form-group">
+        <label for="examName">Exam Name:</label>
+        <input type="text" id="examName" required />
+      </div>
+
+      <div class="form-group">
+        <label for="examDate">Exam Date:</label>
+        <input type="date" id="examDate" required />
+      </div>
+
+      <div class="form-group">
+        <label for="studyTopics">Study Topics (comma-separated):</label>
+        <input type="text" id="studyTopics" placeholder="Math,Physics,Chemistry" required />
+      </div>
+
+      <div class="form-group">
+        <label for="subTopics">Sub-topics (comma-separated):</label>
+        <input type="text" id="subTopics" placeholder="Algebra,Calculus,Mechanics" required />
+      </div>
+
+      <div class="form-group">
+        <label for="timePerTopic">Study Time per Topic:</label>
+        <input type="time" id="timePerTopic" required />
+      </div>
+
+      <div class="form-group">
+        <label for="timePerSubtopic">Study Time per Sub-topic:</label>
+        <input type="time" id="timePerSubtopic" required />
+      </div>
+
+      <button type="submit" class="btn primary-btn">Add Exam</button>
+    </form>
+
+    <div class="buttons-row">
+      <button id="showPreviousPlansBtn" class="btn secondary-btn">Show Previous Plans</button>
+    </div>
+
+    <section id="outputContainer"></section>
+    <section id="flowchartContainer" class="flowchart-container"></section>
+    <section id="previousPlansContainer" class="previous-plans-container"></section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
